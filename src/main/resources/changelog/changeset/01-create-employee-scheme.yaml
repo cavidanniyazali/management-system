@@ -1,0 +1,59 @@
+databaseChangeLog:
+#  - preConditions:
+#      - runningAs:
+#          username: liquibase
+  - changeSet:
+     id: 1
+     author: javidan
+     changes:
+      - createTable:
+         tableName: users
+         columns:
+           - column:
+               name: id
+               type: serial
+               autoIncrement: true
+               constraints:
+                 primaryKey: true
+                 nullable: false
+                 unique: true
+           - column:
+               name: username
+               type: varchar(50)
+               constraints:
+                 nullable: false
+                 unique: true
+           - column:
+               name: password
+               type: varchar(50)
+               constraints:
+                 nullable: false
+           -  column:
+               name: firstname
+               type: varchar(50)
+           -  column:
+               name: lastname
+               type: varchar(50)
+           - column:
+               name: email
+               type: varchar(50)
+           - column:
+               name: phone
+               type: varchar(50)
+           - column:
+               name: age
+               type: int
+           - column:
+               name: birthday
+               type: date
+           -  column:
+               name: registered_at
+               type: timestamp
+           - column:
+               name: updated_on
+               type: timestamp
+           - column:
+               name: is_active
+               type: boolean
+               constraints:
+                 nullable: false

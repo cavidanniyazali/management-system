@@ -1,0 +1,44 @@
+databaseChangeLog:
+#  - preConditions:
+#      - runningAs:
+#          username: liquibase
+  - changeSet:
+      id: 1
+      author: javidan
+      changes:
+        - insert:
+            tableName: users
+            columns:
+              - column:
+                  name: username
+                  value: 'cavidan.niyazali'
+              - column:
+                  name: password
+                  value: '12345'
+              - column:
+                  name: firstname
+                  value: 'Cavidan'
+              - column:
+                  name: lastname
+                  value: 'Niyazali'
+              - column:
+                  name: email
+                  value: 'cavidan.niyazali@gmail.com'
+              - column:
+                  name: phone
+                  value: '+994(55)-545-16-92'
+              - column:
+                  name: age
+                  value: 23
+              - column:
+                  name: birthday
+                  value: '1999-08-16'
+              - column:
+                  name: registered_at
+                  value:
+              - column:
+                  name: updated_on
+                  value:
+              - column:
+                  name: is_active
+                  value: true

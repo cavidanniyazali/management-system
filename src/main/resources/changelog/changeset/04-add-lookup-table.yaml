@@ -1,0 +1,14 @@
+databaseChangeLog:
+#  - preConditions:
+#      - runningAs:
+#          username: liquibase
+  - changeSet:
+      id: 3
+      author: javidan
+      changes:
+        - addLookupTable:
+            existingTableName: person
+            existingColumnName: state
+            newTableName: state
+            newColumnName: id
+            newColumnDataType: char(2)

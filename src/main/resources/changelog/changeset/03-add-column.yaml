@@ -1,0 +1,14 @@
+databaseChangeLog:
+#  - preConditions:
+#      - runningAs:
+#          username: liquibase
+  - changeSet:
+      id: 3
+      author: javidan
+      changes:
+        - addColumn:
+            tableName: person
+            columns:
+              - column:
+                  name: username
+                  type: varchar(8)
