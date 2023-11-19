@@ -1,0 +1,11 @@
+databaseChangeLog:
+#  - includeAll:
+#      path: db/changelog/changeset
+  - include:
+      file: db/changelog/changeset/01-create-employee-scheme.yaml
+  - include:
+      file: db/changelog/changeset/02-data-insert-user.yaml
+#  - include:
+#      file: db/changelog/changeset/03-add-column.yaml
+#  - include:
+#      file: db/changelog/changeset/04-add-lookup-table.yaml

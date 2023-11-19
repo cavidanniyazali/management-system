@@ -1,1 +1,19 @@
+server:
+  port: 8050
 
+spring:
+  datasource:
+    url: ${DATABASE_URL}
+    #    url: jdbc:postgresql://localhost:5432/pasha?currentSchema=devzone
+    #    username: ${DATABASE_USERNAME}
+    username: postgres
+    #    password: ${DATABASE_PASSWORD}
+    password: 12345
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+      show-sql: true
+    liquibase:
+      change-log: classpath:db/changelog/changeset/db.changelog-master.yaml
+      enabled: true
